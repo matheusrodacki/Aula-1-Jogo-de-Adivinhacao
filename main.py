@@ -28,7 +28,7 @@ while (chute_str != "x"):
         if (chute_str != "x"):
             chute = int(chute_str)
           
-            if (chute < 1 or chute > 100 or chute ==):
+            if (chute < 1 or chute > 100):
                 print("Você deve digitar um número entre 1 e 100!")
                 continue
             
@@ -43,8 +43,12 @@ while (chute_str != "x"):
             else:
                 if (maior):
                     print("Você errou! O seu chute foi maior que o número secreto.\n")
+                    if (rodada == total_de_tentativas):
+                        print("O número secreto era {}. Você fez {}".format(numero_secreto, pontos))
                 elif (menor):
                     print("Você errou! O seu chute foi menor que o número secreto.\n")
+                    if (rodada == total_de_tentativas):
+                        print("O número secreto era {}. Você fez {}".format(numero_secreto, pontos))
                 pontos_perdidos = abs(numero_secreto - chute)
                 pontos = pontos - pontos_perdidos
               
