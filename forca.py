@@ -5,3 +5,7 @@ def jogar():
   print("***************************\n")
 
   print("Obrigado por jogar!")
+
+
+if (__name__ == "__main__"):
+  jogar()
